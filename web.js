@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
   var buffer = new Buffer(100);
   buffer.write("Sam says Hello Web!", "utf-8");
-    response.send(buffer);
+    response.send(buffer.toString("utf-8"));
   response.send('Neville says -- Hello Web! -- latest realaay');
 });
 

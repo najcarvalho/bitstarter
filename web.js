@@ -4,7 +4,9 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   var buffer = new Buffer(100);
+  buffer.write("Sam says Hello Web!", "utf-8");
   response.send('Neville says -- Hello Web! -- latest realzzzz');
+  response.send(buffer);
 });
 
 var port = process.env.PORT || 5000;
